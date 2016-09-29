@@ -234,6 +234,12 @@ end
     if matches[1] == "درباره" then
       user_info("user#id"..matches[2],user_info_callback,{msg=msg})
     end
+	if matches[1] == 'راه اندازی مجدد' then
+		receiver = get_receiver(msg)
+		reload_plugins(true)
+		post_msg(receiver, "", ok_cb, false)
+		return "!راه اندازی مجدد انجام شد"
+	end
 	if matches[1] == 'آپدیت آیدی' then
 		local data = load_data(_config.moderation.data)
 		local long_id = data[tostring(msg.to.id)]['long_id']
