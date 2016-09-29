@@ -238,7 +238,7 @@ end
 		receiver = get_receiver(msg)
 		reload_plugins(true)
 		post_msg(receiver, "", ok_cb, false)
-		return "!راه اندازی مجدد انجام شد"
+		return "راه اندازی مجدد انجام شد!"
 	end
 	if matches[1] == 'آپدیت آیدی' then
 		local data = load_data(_config.moderation.data)
