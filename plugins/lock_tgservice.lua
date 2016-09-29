@@ -3,8 +3,7 @@ local function run(msg)
      if data[tostring(msg.to.id)]['settings']['lock_tgservice'] == '🔒' then
         delete_msg(msg.id, ok_cb, true)
         return 
-      end
-   end
+    end
 end
 
 return {
