@@ -71,7 +71,7 @@ function clear_commandsbad(msg, cmd_name)
 end
 
 local function run(msg, matches)
-  if matches[2] == 'addword' then
+  if matches[2] == 'فیلتر' then
   if not is_momod(msg) then
    return 'فقط مخصوص مدیران می باشد'
   end
@@ -86,7 +86,7 @@ local function run(msg, matches)
 if not is_momod(msg) then return '_|_' end
   local asd = '1'
     return clear_commandbad(msg, asd)
-  elseif matches[2] == 'remword' or matches[2] == 'rw' then
+  elseif matches[2] == 'remword' then
    if not is_momod(msg) then return '_|_' end
     return clear_commandsbad(msg, matches[3])
   else
@@ -98,8 +98,7 @@ end
 
 return {
   patterns = {
-  "^([!/])(rw) (.*)$",
-  "^([!/])(addword) (.*)$",
+  "^(فیلتر) (.*)$",
    "^([!/])(remword) (.*)$",
     "^([!/])(badwords)$",
     "^([!/])(clearbadwords)$",
