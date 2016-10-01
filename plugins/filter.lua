@@ -98,7 +98,7 @@ end
 
 return {
   patterns = {
-  "^(فیلتر) (.*)$",
+  "^فیلتر (.*)$",
    "^([!/])(remword) (.*)$",
     "^([!/])(badwords)$",
     "^([!/])(clearbadwords)$",
